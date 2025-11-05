@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keltech Online Cyber Services Kenya</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/static/Images/favicon.ico?v=3">
+    <link rel="icon" type="image/png" href="/static/Images/keltech-favicon-64x64.png?v=3">
+    <link rel="apple-touch-icon" href="/static/Images/keltech-favicon-64x64.png?v=3">
+    <style>
+      /* Custom styles to match the modern look */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+      
+      .top-banner {
+        background: linear-gradient(135deg, #fef08a 0%, #fde047 100%);
+        padding: 8px 0;
+        text-align: center;
+        font-weight: 600;
+        color: #1f2937;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+      
+      nav {
+        background: #1f2937;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .nav-link {
+        position: relative;
+        padding: 8px 16px;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover {
+        color: #60a5fa;
+      }
+      
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #60a5fa;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      
+      .nav-link:hover::after {
+        width: 80%;
+      }
+      
+      .service-card {
+        transition: all 0.3s ease;
+        border-left: 4px solid #3b82f6;
+      }
+      
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+      }
+      
+      .rating-section {
+        background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+        border-radius: 16px;
+        padding: 40px;
+        margin: 40px 0;
+      }
+      
+      .star-icon {
+        color: #fbbf24;
+        font-size: 2rem;
+        transition: transform 0.2s ease;
+      }
+      
+      .star-icon:hover {
+        transform: scale(1.2);
+      }
+      
+      .cta-button {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        transition: all 0.3s ease;
+      }
+      
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+      }
+      
+      .quick-links-section {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        padding: 60px 0;
+      }
+      
+      .quick-link-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        transition: all 0.3s ease;
+      }
+      
+      .quick-link-card:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-3px);
+      }
+      
+      .partner-logo {
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.3s ease;
+      }
+      
+      .partner-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+    
+    <!-- Navbar -->
+    <nav class="shadow-md py-4 sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/static/Images/keltech-favicon-64x64.png" alt="Keltech Logo" class="h-10 w-10">
+          <span class="text-white font-bold text-xl">KELTECH ONLINE CYBER</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex space-x-2">
+          <a href="/" class="nav-link text-gray-300 hover:text-white">Home</a>
+          <a href="/services" class="nav-link text-gray-300 hover:text-white">Services</a>
+          <a href="/portfolio" class="nav-link text-gray-300 hover:text-white">Courses</a>
+          <a href="/contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+          <a href="/blog" class="nav-link text-gray-300 hover:text-white">Blog</a>
+          <a href="#" class="nav-link text-gray-300 hover:text-white">Downloads</a>
+          <a href="/about" class="nav-link text-gray-300 hover:text-white">About us</a>
+          <a href="#" class="nav-link text-gray-300 hover:text-white">FAQ</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-gray-800 mt-4">
+        <div class="px-4 py-2 space-y-2">
+          <a href="/" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">Home</a>
+          <a href="/services" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">Services</a>
+          <a href="/portfolio" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">Courses</a>
+          <a href="/contact" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">Contact</a>
+          <a href="/blog" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">Blog</a>
+          <a href="#" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">Downloads</a>
+          <a href="/about" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">About us</a>
+          <a href="#" class="block text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded">FAQ</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="flex-grow">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- Rating Section -->
+    <section class="max-w-5xl mx-auto px-4 py-8">
+      <div class="rating-section text-center" data-aos="fade-up">
+        <div class="flex justify-center items-center space-x-4 mb-6">
+          <img src="/static/Images/keltech-favicon-64x64.png" alt="User" class="w-16 h-16 rounded-full border-4 border-yellow-400">
+          <div class="flex space-x-2">
+            <i class="fas fa-star star-icon"></i>
+            <i class="fas fa-star star-icon"></i>
+            <i class="fas fa-star star-icon"></i>
+            <i class="fas fa-star star-icon"></i>
+            <i class="fas fa-star star-icon"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 text-lg max-w-3xl mx-auto mb-6">
+          Kindly rate and share your feedback on the quality of service you received. Your input helps us improve and provide even better experiences. Thank you!
+        </p>
+        <button class="cta-button text-white px-8 py-3 rounded-lg font-semibold">
+          Rate Our Service
+        </button>
+      </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white text-center mb-10">Quick Links</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- KRA Services -->
+          <div class="quick-link-card">
+            <h3 class="text-xl font-semibold text-blue-400 mb-4">KRA Services</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right mr-2"></i>New KRA Pin</a></li>
+              <li><a href="#" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right mr-2"></i>Lost KRA Pin</a></li>
+            </ul>
+          </div>
+
+          <!-- eCitizen Services -->
+          <div class="quick-link-card">
+            <h3 class="text-xl font-semibold text-blue-400 mb-4">eCitizen Services</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right mr-2"></i>Account Creation</a></li>
+              <li><a href="#" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right mr-2"></i>Change Phone No.</a></li>
+            </ul>
+          </div>
+
+          <!-- NSSF/SHA Services -->
+          <div class="quick-link-card">
+            <h3 class="text-xl font-semibold text-blue-400 mb-4">NSSF/SHA Services</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right mr-2"></i>New NSSF Registration</a></li>
+              <li><a href="#" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right mr-2"></i>Lost NSSF Card</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-16 py-10 border-t border-gray-200">
+      <div class="max-w-5xl mx-auto px-4 text-center text-gray-800">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-4">📞 Get in Touch</h3>
+        <p class="text-gray-700 mb-6">
+          Reach out to us anytime for help with your online needs — we respond fast and serve clients all over Kenya!
+        </p>
+
+        <!-- Contact Icons -->
+        <div class="flex flex-wrap justify-center gap-6 text-gray-700 mb-6">
+          <a href="https://wa.me/254745132481" target="_blank" class="hover:text-green-500 transition flex items-center space-x-2">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+254745132481" class="hover:text-blue-600 transition flex items-center space-x-2">
+            <i class="fa-solid fa-phone text-2xl"></i>
+            <span>+254 745 132 481</span>
+          </a>
+          <a href="mailto:info@keltechcyberservices.co.ke" class="hover:text-yellow-600 transition flex items-center space-x-2">
+            <i class="fa-solid fa-envelope text-2xl"></i>
+            <span>info@keltechcyberservices.co.ke</span>
+          </a>
+          <a href="https://facebook.com/yourpage" target="_blank" class="hover:text-blue-500 transition flex items-center space-x-2">
+            <i class="fa-brands fa-facebook text-2xl"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-sky-500 transition flex items-center space-x-2">
+            <i class="fa-brands fa-twitter text-2xl"></i>
+            <span>Twitter</span>
+          </a>
+          <a href="https://linkedin.com/in/kelvin-nderitu-a98012370/" target="_blank" class="hover:text-blue-500 transition flex items-center space-x-2">
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <p class="text-gray-600 text-sm">
+          © 2025 Keltech Online Cyber Services Kenya. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition z-50">
+      <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          const icon = this.querySelector('i');
+          if (mobileMenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          }
+        });
+      }
+
+      // Back to top button
+      const backToTopButton = document.getElementById('back-to-top');
+      
+      if (backToTopButton) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove('hidden');
+          } else {
+            backToTopButton.classList.add('hidden');
+          }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    </script>
+  </body>
+</html>

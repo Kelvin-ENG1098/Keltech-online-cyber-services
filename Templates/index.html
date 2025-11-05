@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section with Partner Logos -->
+<section class="relative text-center py-20" style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Partner Logos -->
+    <div class="flex justify-center items-center gap-12 mb-12 flex-wrap" data-aos="fade-down">
+      <img src="/static/Images/ecitizen-logo.png" alt="eCitizen" class="partner-logo h-16 object-contain">
+      <img src="/static/Images/kra-logo.png" alt="KRA" class="partner-logo h-16 object-contain">
+      <img src="/static/Images/ntsa-logo.png" alt="NTSA" class="partner-logo h-16 object-contain">
+      <img src="/static/Images/nhif-logo.png" alt="NHIF" class="partner-logo h-16 object-contain">
+    </div>
+
+    <!-- Hero Content -->
+    <div class="text-white" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Welcome to <span class="text-sky to-blue-700">Keltech Online Cyber Services</span> Kenya
+      </h1>
+      <p class="text-blue-100 text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+        Fast, reliable, and affordable online services across Kenya — from eCitizen and KRA to branding, writing, and digital payments.
+      </p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="/services" class="cta-button text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center">
+          Explore Our Services
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="/contact" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center">
+          Contact Us
+          <i class="fas fa-phone ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-white py-12 border-b" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8 text-center">
+      <div class="p-6">
+        <div class="text-4xl font-bold text-blue-600 mb-2">5000+</div>
+        <div class="text-gray-600">Happy Clients</div>
+      </div>
+      <div class="p-6">
+        <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+        <div class="text-gray-600">Services Offered</div>
+      </div>
+      <div class="p-6">
+        <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+        <div class="text-gray-600">Support Available</div>
+      </div>
+      <div class="p-6">
+        <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
+        <div class="text-gray-600">Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="max-w-6xl mx-auto mt-16 px-4">
+  <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">Why Choose Us?</h2>
+  <p class="text-center text-gray-700 text-lg max-w-3xl mx-auto mb-12 leading-relaxed" data-aos="fade-up">
+    We make online processes simple and accessible for everyone — whether you're applying for government documents, setting up your business online, or growing your brand. We're here to help you get things done efficiently and professionally.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <!-- Feature 1 -->
+    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition service-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">Fast & Reliable</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Get your services completed quickly with our efficient processes and dedicated support team available 24/7.
+      </p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition service-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+        <i class="fas fa-shield-check text-green-600 text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">Secure & Trusted</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Your data and documents are handled with the highest level of security and confidentiality.
+      </p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition service-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+        <i class="fas fa-tag text-yellow-600 text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">Affordable Pricing</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Quality services at competitive prices. No hidden fees, transparent pricing for all our services.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Services Section -->
+<section class="bg-gray-50 py-16 mt-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-gray-900 mb-4" data-aos="fade-up">Popular Services</h2>
+    <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12" data-aos="fade-up">
+      Our most requested services by Kenyan clients
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Service Card 1 -->
+      <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition" data-aos="fade-up">
+        <div class="text-blue-600 text-3xl mb-3">
+          <i class="fas fa-id-card"></i>
+        </div>
+        <h3 class="font-semibold text-gray-900 mb-2">KRA PIN Services</h3>
+        <p class="text-gray-600 text-sm mb-3">New registration, lost PIN recovery, and iTax support</p>
+        <a href="/services" class="text-blue-600 text-sm font-semibold hover:underline">Learn more →</a>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-blue-600 text-3xl mb-3">
+          <i class="fas fa-user-check"></i>
+        </div>
+        <h3 class="font-semibold text-gray-900 mb-2">eCitizen Services</h3>
+        <p class="text-gray-600 text-sm mb-3">Account creation, certificates, and government applications</p>
+        <a href="/services" class="text-blue-600 text-sm font-semibold hover:underline">Learn more →</a>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-blue-600 text-3xl mb-3">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <h3 class="font-semibold text-gray-900 mb-2">CV Writing</h3>
+        <p class="text-gray-600 text-sm mb-3">Professional CV, cover letters, and LinkedIn profiles</p>
+        <a href="/services" class="text-blue-600 text-sm font-semibold hover:underline">Learn more →</a>
+      </div>
+
+      <!-- Service Card 4 -->
+      <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-blue-600 text-3xl mb-3">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h3 class="font-semibold text-gray-900 mb-2">Digital Marketing</h3>
+        <p class="text-gray-600 text-sm mb-3">Social media management, branding, and advertising</p>
+        <a href="/services" class="text-blue-600 text-sm font-semibold hover:underline">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Blog Posts Section -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <div class="text-center mb-12" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-gray-900 mb-4">Latest Updates & News</h2>
+    <p class="text-gray-600 max-w-3xl mx-auto">
+      Stay informed with the latest updates on government services, digital guides, and helpful tips for Kenyans
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    
+    <!-- Blog Post 1 -->
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up">
+      <div class="relative">
+        <img src="/static/Images/blog/ntsa-plates.jpg" alt="NTSA Number Plates" class="w-full h-48 object-cover">
+        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded text-sm font-semibold text-gray-700">
+          29TH AUGUST 2025
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition">
+          <a href="/blog/ntsa-number-plates-deadline">Government Sets August 29, 2025 Deadline for New Generation Number Plates</a>
+        </h3>
+        <p class="text-gray-600 mb-4">
+          In a sweeping directive issued on May 21, the Kenyan Government has mandated that all public institutions...
+        </p>
+        <a href="/blog/ntsa-number-plates-deadline" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+      </div>
+    </article>
+
+    <!-- Blog Post 2 -->
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative">
+        <img src="/static/Images/blog/sha-building.jpg" alt="SHA Building" class="w-full h-48 object-cover">
+        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded text-sm font-semibold text-gray-700">
+          28TH AUGUST 2025
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition">
+          <a href="/blog/sha-monthly-payments-appeal">How to appeal SHA monthly payments</a>
+        </h3>
+        <p class="text-gray-600 mb-4">
+          If you're being charged more than Ksh. 500 per month for your SHA (formerly NHIF) contributions, don't worry — we can help you reduce it to Ksh. 500...
+        </p>
+        <a href="/blog/sha-monthly-payments-appeal" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+      </div>
+    </article>
+
+    <!-- Blog Post 3 -->
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative">
+        <img src="/static/Images/blog/nssf-building.jpg" alt="NSSF Building" class="w-full h-48 object-cover">
+        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded text-sm font-semibold text-gray-700">
+          27TH AUGUST 2025
+        </div>
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition">
+          <a href="/blog/nssf-registration-guide">How to register for NSSF?</a>
+        </h3>
+        <p class="text-gray-600 mb-4">
+          As more government services move online, thousands of Kenyans are still struggling to navigate complex digital systems — especially when it comes to the National Social Security Fund (NSSF)...
+        </p>
+        <a href="/blog/nssf-registration-guide" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- View All Blog Posts Button -->
+  <div class="text-center mt-10" data-aos="fade-up">
+    <a href="/blog" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition">
+      View All Articles →
+    </a>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-gradient-to-r from-blue-600 to-blue-800 py-16 mt-16" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto px-4 text-center text-white">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+    <p class="text-blue-100 text-lg mb-8">
+      Join thousands of satisfied clients across Kenya. We're here to help you navigate the digital world.
+    </p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="https://wa.me/254745132481" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition inline-flex items-center">
+        <i class="fa-brands fa-whatsapp mr-2"></i>
+        WhatsApp Us
+      </a>
+      <a href="tel:+254745132481" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center">
+        <i class="fas fa-phone mr-2"></i>
+        Call Now
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
