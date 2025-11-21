@@ -1,7 +1,9 @@
-from asgiref.wsgi import WsgiToAsgi
+import sys
+import os
 
-# Import the Flask app instance from the project root
-from app import app as flask_app
+# Add the parent directory to Python path so we can import from root
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Wrap the WSGI Flask app with an ASGI adapter
-app = WsgiToAsgi(flask_app)
+# Import your Flask app from app.py in the root directory
+from app import app
+
