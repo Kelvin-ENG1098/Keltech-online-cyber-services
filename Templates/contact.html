@@ -3,18 +3,30 @@
 {% block content %}
 <section class="max-w-2xl mx-auto mt-10">
   <h2 class="text-3xl font-bold text-blue-400 mb-6 text-center">Contact Us</h2>
+  
+  <!-- Display flash messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="{% if category == 'success' %}bg-green-500{% else %}bg-red-500{% endif %} text-white p-4 rounded-lg mb-4">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  
   <form action="/contact" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-4">
     <div>
       <label class="block mb-1 text-gray-300">Name</label>
-      <input type="text" name="name" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 focus:border-blue-400">
+      <input type="text" name="name" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 focus:border-blue-400 text-white placeholder-gray-500">
     </div>
     <div>
       <label class="block mb-1 text-gray-300">Email</label>
-      <input type="email" name="email" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 focus:border-blue-400">
+      <input type="email" name="email" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 focus:border-blue-400 text-white placeholder-gray-500">
     </div>
     <div>
       <label class="block mb-1 text-gray-300">Message</label>
-      <textarea name="message" rows="5" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 focus:border-blue-400"></textarea>
+      <textarea name="message" rows="5" required class="w-full p-2 rounded bg-gray-900 border border-gray-700 focus:border-blue-400 text-white placeholder-gray-500"></textarea>
     </div>
     <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition">
       Send Message

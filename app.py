@@ -1,22 +1,25 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mail import Mail, Message
-
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
 
 # ------------------------------
 # App Configuration
 # ------------------------------
-app.secret_key = ''  # Replace with a secure secret key
+# Use SECRET_KEY from environment for production; fall back to a dev value for local runs
+app.secret_key = os.environ.get('SECRET_KEY', 'kangajunior')
 
 # Flask-Mail configuration
 app.config.update(
-    MAIL_SERVER='smtp.gmail.com',          # e.g. smtp.gmail.com
-    MAIL_PORT=587,                         # or 465 for SSL
-    MAIL_USE_TLS=True,                     # Use TLS (recommended)
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=587,
+    MAIL_USE_TLS=True,
     MAIL_USE_SSL=False,
-    MAIL_USERNAME = app.config.get("MAIL_USERNAME"),
-    MAIL_PASSWORD = app.config.get("MAIL_PASSWORD")
-     # Use a Gmail app password
+    # FIXED: Use os.environ.get() instead of app.config.get()
+    MAIL_USERNAME=os.environ.get('MAIL_USERNAME', 'kmainanderitu44@gmail.com'),
+    MAIL_PASSWORD=os.environ.get('MAIL_PASSWORD', 'fhsh prof bthx pldf')
 )
 
 mail = Mail(app)
@@ -53,8 +56,6 @@ def blog():
 @app.route('/blog/<slug>')
 def blog_post(slug):
     """Individual blog post page"""
-    # You can add logic here to fetch specific blog post data from database
-    # For now, we'll just pass the slug to the template
     return render_template('blog-post.html', title='Blog Post', slug=slug)
 
 @app.route('/contact', methods=['GET', 'POST'])
@@ -75,7 +76,7 @@ def contact():
         msg = Message(
             subject=f'New Contact Message from {name}',
             sender=app.config['MAIL_USERNAME'],
-            recipients=[app.config['MAIL_USERNAME']],  # You receive the message
+            recipients=[app.config['MAIL_USERNAME']],
             body=f"From: {name} <{email}>\n\n{message}"
         )
 
@@ -84,7 +85,7 @@ def contact():
             flash('✅ Your message has been sent successfully!', 'success')
         except Exception as e:
             print(f"Email failed to send: {e}")
-            flash('❌ Something went wrong while sending your message.', 'error')
+            flash('❌ Something went wrong while sending your message. Please try again later.', 'error')
 
         return redirect(url_for('contact'))
 
@@ -105,7 +106,7 @@ def internal_server_error(e):
     return render_template('500.html', title='Server Error'), 500
 
 # ------------------------------
-# Context Processors (Optional - for global template variables)
+# Context Processors
 # ------------------------------
 
 @app.context_processor

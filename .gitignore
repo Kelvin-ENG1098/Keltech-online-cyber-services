@@ -42,3 +42,4 @@ public/static/node_modules/
 
 # Generated favicon or temp
 *.ico
+.vercel
