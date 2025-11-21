@@ -6,7 +6,7 @@ app = Flask(__name__)
 # ------------------------------
 # App Configuration
 # ------------------------------
-app.secret_key = 'your_secret_key_here'  # Replace with a secure secret key
+app.secret_key = ''  # Replace with a secure secret key
 
 # Flask-Mail configuration
 app.config.update(
@@ -14,8 +14,9 @@ app.config.update(
     MAIL_PORT=587,                         # or 465 for SSL
     MAIL_USE_TLS=True,                     # Use TLS (recommended)
     MAIL_USE_SSL=False,
-    MAIL_USERNAME='your_email@gmail.com',  # Replace with your Gmail
-    MAIL_PASSWORD='your_app_password',     # Use a Gmail app password
+    MAIL_USERNAME = app.config.get("MAIL_USERNAME"),
+    MAIL_PASSWORD = app.config.get("MAIL_PASSWORD")
+     # Use a Gmail app password
 )
 
 mail = Mail(app)

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+.env
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+installed.cfg
+*.egg
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Public folder built assets (if you build locally)
+public/static/node_modules/
+
+# Generated favicon or temp
+*.ico
