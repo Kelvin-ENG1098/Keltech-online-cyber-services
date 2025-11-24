@@ -6,10 +6,23 @@
   <div class="max-w-6xl mx-auto px-4">
     <!-- Partner Logos -->
     <div class="flex justify-center items-center gap-12 mb-12 flex-wrap" data-aos="fade-down">
-      <img src="/static/Images/ecitizen-logo.png" alt="eCitizen" class="partner-logo h-16 object-contain">
-      <img src="/static/Images/kra-logo.png" alt="KRA" class="partner-logo h-16 object-contain">
-      <img src="/static/Images/ntsa-logo.png" alt="NTSA" class="partner-logo h-16 object-contain">
-      <img src="/static/Images/nhif-logo.png" alt="NHIF" class="partner-logo h-16 object-contain">
+      <img src="{{ url_for('static', filename='Images/ecitizen.logo.png') }}"
+     alt="eCitizen"
+     class="h-16 w-auto max-w-full object-contain md:h-20 lg:h-24">
+
+      <img src="{{ url_for('static', filename='Images/kra.logo.png') }}"
+     alt="KRA"
+     class="h-16 w-auto max-w-full object-contain md:h-20 lg:h-24">
+
+      <img src="{{ url_for('static', filename='Images/ntsa.logo.png') }}"
+     alt="NTSA"
+     class="h-16 w-auto max-w-full object-contain md:h-20 lg:h-24">
+
+      <img src="{{ url_for('static', filename='Images/SHA.logo.png') }}"
+     alt="SHA"
+     class="h-16 w-auto max-w-full object-contain md:h-20 lg:h-24">
+
+
     </div>
 
     <!-- Hero Content -->
