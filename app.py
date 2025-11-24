@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 load_dotenv()
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates', static_folder='Static', static_url_path='/static')
 
 # ------------------------------
 # App Configuration
