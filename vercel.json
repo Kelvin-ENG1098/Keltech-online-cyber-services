@@ -1,21 +1,19 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python"
+  "functions": {
+    "api/**/*.py": {
+      "runtime": "python3.12",
+      "maxDuration": 30,
+      "includeFiles": [
+        "Templates/**",
+        "Static/**"
+      ]
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
       "dest": "api/index.py"
     }
-  ],
-  "functions": {
-    "api/**/*.py": {
-      "runtime": "python3.12",
-      "maxDuration": 30
-    }
-  }
+  ]
 }
